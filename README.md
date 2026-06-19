@@ -1,6 +1,6 @@
 # Agentic Video QA
 
-An agentic system for long-form video understanding using CLIP embeddings and LLM function-calling. The agent reasons over video frames through a structured tool-use loop — retrieving semantically relevant frames, detecting scenes, counting events, and synthesizing a natural-language answer.
+An agentic system for long-form video understanding using CLIP embeddings and LLM function-calling. The agent reasons over video frames through a structured tool-use loop retrieving semantically relevant frames, detecting scenes, counting events, and synthesizing a natural-language answer.
 
 Supports **Ollama (local/free)**, OpenAI, or a CLIP-only retrieval fallback with no LLM required.
 
