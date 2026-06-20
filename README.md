@@ -29,6 +29,9 @@ VideoAgent (LLM loop)   ← Ollama (llama3.2) or OpenAI with tool-calling
     │
     ▼
 Natural-language answer
+
+<img width="1752" height="898" alt="d0a392fe-bb18-4eda-afae-bf26b828faa9" src="https://github.com/user-attachments/assets/30c84217-afa5-4b54-a37a-344370bc69ec" />
+
 ```
 
 ---
