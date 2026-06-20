@@ -102,16 +102,6 @@ print(f"Accuracy: {results['accuracy']:.2%}")
 
 ---
 
-## LLM Backends
-
-| Backend | Model | Requires |
-|---|---|---|---|
-| Ollama | llama3.2, mistral, qwen2.5 |  [Ollama](https://ollama.com) installed |
-
-The agent tries native tool-calling first, and automatically falls back to ReAct-style prompting if the model doesn't support it.
-
----
-
 ## Extending
 
 - **Swap CLIP for BLIP-2 / InternVL**: Replace `CLIPVideoEncoder` with any HuggingFace VLM.
