@@ -2,7 +2,7 @@
 
 An agentic system for long-form video understanding using CLIP embeddings and LLM function-calling. The agent reasons over video frames through a structured tool-use loop retrieving semantically relevant frames, detecting scenes, counting events, and synthesizing a natural-language answer.
 
-Supports **Ollama (local/free)**, OpenAI, or a CLIP-only retrieval fallback with no LLM required.
+Supports **Ollama**, OpenAI, or a CLIP-only retrieval fallback with no LLM required.
 
 ---
 
@@ -56,7 +56,7 @@ Natural-language answer
 pip install -r requirements.txt
 ```
 
-**Install Ollama** (free, runs locally): download from [ollama.com](https://ollama.com/download), then pull a model:
+**Install Ollama**: download from [ollama.com](https://ollama.com/download), then pull a model:
 
 ```bash
 ollama pull llama3.2
@@ -67,7 +67,7 @@ ollama pull llama3.2
 ## Usage
 
 ```bash
-# Ollama (local, free) — recommended
+# Ollama — recommended
 python demo.py --video path/to/video.mp4 --question "What is happening in this video?" --llm-backend ollama --llm-model llama3.2
 
 # Smaller/faster model
@@ -104,11 +104,9 @@ print(f"Accuracy: {results['accuracy']:.2%}")
 
 ## LLM Backends
 
-| Backend | Model | Cost | Requires |
+| Backend | Model | Requires |
 |---|---|---|---|
-| Ollama | llama3.2, mistral, qwen2.5 | Free | [Ollama](https://ollama.com) installed |
-| OpenAI | gpt-4o-mini, gpt-4o | Paid | `OPENAI_API_KEY` env var |
-| None | — | Free | Nothing |
+| Ollama | llama3.2, mistral, qwen2.5 |  [Ollama](https://ollama.com) installed |
 
 The agent tries native tool-calling first, and automatically falls back to ReAct-style prompting if the model doesn't support it.
 
